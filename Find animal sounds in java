@@ -1,0 +1,158 @@
+public class Animal{
+
+    private String name;
+    private int age;
+    private char gender;
+
+
+    public Animal(String name, int age, char gender){
+
+        this.name= name;
+        this.age = age;
+        this.gender = gender;
+    }
+
+
+    public void setName(){
+
+        this.name = name;
+    }
+
+    public String getName(){
+
+        return name;
+    }
+
+
+
+    public void setAge(){
+
+        this.age = age;
+    }
+
+    public int getAge(){
+
+        return age;
+    }
+
+
+
+    public void setgender(){
+
+        this.gender = gender;
+    }
+
+    public char getGender(){
+
+        return gender;
+    }
+
+
+    public String produceSound(){
+
+        return null;
+    }
+
+    public String toString(){
+
+        return ("Name: "+ this.getName()+ "\nAge: "+ this.getAge()+ "\nGender: "+ this.getGender()+"\nSound: "+ this.produceSound());
+    }
+}
+public class Dog extends Animal{
+
+    public Dog(String name, int age, char gender){
+
+        super(name, age, gender);
+    }
+
+    public String produceSound(){
+
+        return "Bawo Bawo";
+    }
+}
+public class Frog extends Animal{
+
+    public Frog(String name, int age, char gender){
+
+        super(name, age, gender);
+    }
+
+    public String produceSound(){
+
+        return "Waag Waag";
+    }
+}
+public class Kitten extends Animal{
+
+    public Kitten(String name, int age, char gender){
+
+        super(name, age, gender);
+    }
+
+    public String produceSound(){
+
+        return "Meeeo meeeo";
+    }
+}
+public class Tom extends Animal{
+
+    public Tom(String name, int age, char gender){
+
+        super(name, age, gender);
+    }
+
+    public String produceSound(){
+
+        return "Meow Meow";
+    }
+}
+public class Tomcat extends Animal{
+
+    public Tomcat(String name, int age, char gender){
+
+        super(name, age, gender);
+    }
+
+    public String produceSound(){
+
+        return "meon meon";
+    }
+}
+public class AnimalTest{
+
+
+
+    public static void main(String args[]){
+
+         int num = 0;
+        Dog d1 = new Dog("Buzo", 10, 'M');
+
+        System.out.println("\n***Dog Data*\n");
+        System.out.println(d1.toString());
+
+
+        Frog f1 = new Frog("Lusifar", 6, 'M');
+
+        System.out.println("\n\n\n***Frog Data*\n");
+        System.out.println(f1.toString());
+
+        Kitten k1 = new Kitten("Kitti", 4, 'F');
+
+        System.out.println("\n\n\n***Kitten Data*\n");
+        System.out.println(k1.toString());
+
+        Tomcat t1 = new Tomcat("Tomi", 8, 'M');
+
+        System.out.println("\n\n\n***Tomcat Data*\n");
+        System.out.println(t1.toString());
+
+
+        Animal[] array = new Animal[]{d1, f1, k1, t1};
+        
+
+        for(int i=0; i<4; i++){
+         num = num + array[i].getAge();
+        }
+        System.out.println("\n\n\n*********\nAverage Age of Anmials: "+ num/4+"\n*********");
+    }
+}

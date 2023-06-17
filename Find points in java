@@ -1,0 +1,84 @@
+
+public class Point {
+	private int x;
+	private int y;	
+	public Point(int x, int y) {
+	this.x = x;
+	this.y = y;
+	}
+	public int getX() { 
+		return x;
+	}
+	public int getY() { 
+		return y;
+	}
+	public double distanceTo(Point p) {
+	return Math.sqrt((x-p.getX())*(x-p.getX())+
+	(y-p.getY())*(y-p.getY()));
+	}
+	
+	public String toString() {
+	return "("+x+", "+y+")";
+	} 
+}
+public class Rectangle {
+	private int length;
+	private int width;
+	Point c;
+	
+	public Rectangle(int l,int w, Point c) {
+		this.c=new Point(c.getX(),c.getY());
+		this.length=l;
+		this.width=w;
+	}
+	
+	public int getLength() {
+		return length;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public String toString() {
+		return "Length= "+length+" Width= "+width+" Center= ("+c.getX()+", "+c.getY()+")";
+	} 
+}
+
+public class Circle {
+
+	private int radius;
+	Point c;
+	
+	public Circle(int radius, Point c) {
+		this.c=new Point (c.getX(),c.getY());
+		this.radius = radius;
+	}
+	
+	public int getRadius() {
+		return radius;
+	}
+	
+	public String toString() {
+		return "Radius= "+radius+" Center= ("+c.getX()+", "+c.getY()+")";
+	} 
+}
+import java.util.ArrayList;
+public class ShapeArray {
+	
+	ArrayList <Shape> ShapeList [];
+	int nbshapes;
+	
+	public boolean addShape(Shape s) {
+		this.nbshapes
+	}
+}
+
+public class Shape {
+
+	Point p;
+
+	public Shape(Point p) {
+		this.p=new Point (p.getX(),p.getY());
+	}
+	}
